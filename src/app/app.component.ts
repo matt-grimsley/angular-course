@@ -1,12 +1,14 @@
-import { Component, NgModule } from '@angular/core';
-
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styles: [
+    `
+      h3 {
+        color: dodgerblue;
+      }
+    `,
+  ],
 })
-
-export class AppComponent {
-  name = 'matt';
-}
+export class AppComponent {}
