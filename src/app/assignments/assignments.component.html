@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr />
+      <h2>ASSIGNMENTS</h2>
+      <hr />
+      <div class="DirectivesAssignment">
+        <h5>Directives</h5>
+        <!-- <button
+          class="btn btn-primary"
+          (click)="showHiddenText = !showHiddenText"
+        > -->
+        <button class="btn btn-primary" (click)="onToggleDetails()">
+          Click
+        </button>
+        <p *ngIf="showHiddenText">I am hidden text!</p>
+        <div
+          *ngFor="let logItem of log; let i = index"
+          [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+          [ngClass]="{ 'white-text': i >= 5 }"
+        >
+          {{ logItem }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
