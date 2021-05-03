@@ -8,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
 export class AssignmentsComponent implements OnInit {
   showHiddenText = false;
   log = [];
+  oddNumbers = [];
+  evenNumbers = [];
 
   onToggleDetails() {
     this.showHiddenText = !this.showHiddenText;
@@ -18,4 +20,13 @@ export class AssignmentsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onIntervalEvent(n: number) {
+    // console.log(n);
+    if (n % 2 === 0) {
+      this.evenNumbers.push(n);
+    } else {
+      this.oddNumbers.push(n);
+    }
+  }
 }
